@@ -1,0 +1,199 @@
+.business-main{
+  z-index:1;
+  padding-left:238px;
+  padding-top:70px;
+  padding-right:20px;
+
+  h1{
+    width: 100%;
+    line-height: 40px;
+    border-bottom:1px solid #ececec;
+
+    .title{
+      font-size: 20px;
+      font-weight:normal;
+      padding-left:10px;
+      border-left:5px solid #3a9ada;
+      color: #656565;
+    }
+    .el-button{
+      float: right;
+      margin-right:8px;
+    }
+  }
+  .businessForm{
+    width:100%;
+    margin-top:10px;
+
+    .el-col{
+      margin-right:5px;
+
+      .el-select{
+        width:100%;
+      }
+    }
+    .businessSearch{
+      width:auto;
+    }
+    .businessSearchBtn{
+      padding: 8px 12px;
+      margin-left:-5px;
+    }
+  }
+  .businessTab{
+    .el-table{
+      top:-10px;
+    }
+  }
+  .businessTabClass{
+    cursor: pointer;
+  }
+  .businessPagination{
+    margin-top:20px;
+    width: 100%;
+    display: inline-block;
+
+    .businessPage{
+      float: right;
+    }
+    .businessPageInfo{
+      float: right;
+      font-size: 13px;
+      display: inline-block;
+      position: relative;
+      top:6.5px;
+
+      span{
+        color: #333;
+
+        b{
+          color: #e84747;
+        }
+      }
+    }
+  }
+}
+.el-loading-mask{
+  margin-top:60px;
+  margin-left:218px;
+}
+@media screen and (max-width: 1199px){
+  .business-main{
+    padding-left: 10px;
+    padding-right:10px;
+  }
+  //.businessTab{
+  //  .el-table__header-wrapper{
+  //    display: none;
+  //  }
+  //  .el-table__body-wrapper{
+  //    .el-table__body{
+  //      table-layout: initial;
+  //      width: 100%!important;
+  //
+  //      tbody{
+  //        td{
+  //          display: block;
+  //          text-align: right;
+  //
+  //          .cell{
+  //            line-height: 40px;
+  //          }
+  //
+  //          .cellTit{
+  //            display: inline-block;
+  //            float: left;
+  //            font-weight: bold;
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+
+}
+@media screen and (max-width: 768px){
+  .business-main {
+    h1 {
+      .el-button {
+        position: relative;
+        top:5px;
+      }
+    }
+  }
+  .businessTabClass{
+    margin-bottom:5px;
+    border-bottom:1px solid #dfe6ec;
+    td{
+      border: 0 none;
+    }
+  }
+  .el-table__empty-block{
+    width:100%!important;
+  }
+  .businessForm{
+    position: relative;
+
+    .el-col-xs-24{
+      position: absolute;
+      top:0;
+    }
+    .el-col-xs-8{
+      margin-top:35px;
+      .el-form-item{
+        margin-bottom:2px;
+      }
+
+      .el-select{
+        border-right:1px solid #eee;
+        width:auto!important;
+      }
+      &:nth-child(3){
+        .el-select{
+          border-right:0 none;
+        }
+      }
+    }
+    .el-col{
+      margin-right:0!important;
+
+      .el-input__inner{
+        border: 0 none;
+        color: #333;
+      }
+      .el-input__icon{
+        left:55px;
+      }
+    }
+    .businessSearch{
+      width:83%!important;
+      .el-input__inner{
+        background: #eee;
+        color: #333;
+      }
+    }
+  }
+  .el-select-dropdown{
+    border: 0 none;
+    left:0!important;
+    width: 100%;
+    box-shadow: none;
+    //padding-left:20px;
+    border-bottom: 1px solid #c8c7cc;
+    border-top: 1px solid #c8c7cc;
+    background: #f7f7f7;
+    text-align: center;
+
+    .el-select-dropdown__list{
+      padding:0;
+      .el-select-dropdown__item{
+        border-top: 1px solid #c8c7cc;
+
+        &:first-child{
+          border-top: 0 none;
+        }
+      }
+    }
+  }
+}
+

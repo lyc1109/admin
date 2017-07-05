@@ -1,0 +1,242 @@
+.iotDeviceMain{
+  z-index:1;
+  padding-left:238px;
+  padding-top:70px;
+  padding-right:20px;
+
+  h1{
+    width: 100%;
+    line-height: 40px;
+    border-bottom:1px solid #ececec;
+
+    .title{
+      font-size: 20px;
+      font-weight:normal;
+      padding-left:10px;
+      border-left:5px solid #3a9ada;
+      color: #656565;
+    }
+    .el-button{
+      float: right;
+      margin-right:8px;
+    }
+  }
+  .iotDeviceForm{
+    margin-top:5px;
+
+    .el-col{
+      margin-right:8px;
+
+      .el-select{
+        width: 100%;
+      }
+      .iotDeviceFormSearch{
+        width: 60%;
+      }
+      .iotDeviceSearchBtn{
+        padding: 8.2px 12px;
+        margin-left:-5px;
+      }
+    }
+  }
+  .el-table {
+    .cell {
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+  }
+  .iotDeviceData{
+    cursor: pointer;
+  }
+  .iotDevicePagination{
+    margin-top:20px;
+    width: 100%;
+    display: inline-block;
+
+    .iotDevicePage{
+      float: right;
+    }
+    .iotDevicePageInfo{
+      float: right;
+      display: inline-block;
+      position: relative;
+      top:6.5px;
+      font-size: 13px;
+
+      span{
+        color: #333;
+
+        b{
+          color: #e84747;
+        }
+      }
+    }
+  }
+}
+.iotDeviceTabMobile{
+  display: none;
+}
+.el-loading-mask{
+  margin-top:60px;
+  margin-left:218px;
+}
+@media screen and (max-width: 1199px){
+  .iotDeviceMain{
+    padding-left: 10px;
+    padding-right:10px;
+  }
+
+}
+@media screen and (max-width: 768px){
+  .iotDeviceMain {
+    h1 {
+      .el-button {
+        position: relative;
+        top:5px;
+      }
+    }
+  }
+  .iotDeviceData{
+    margin-bottom:5px;
+    border-bottom:1px solid #dfe6ec;
+    td{
+      border: 0 none;
+    }
+  }
+  .el-table__empty-block{
+    width:100%!important;
+  }
+  .iotDeviceForm{
+    position: relative;
+
+    .el-col-xs-24{
+      position: absolute;
+      top:0;
+    }
+    .el-col-xs-8{
+      margin-top:35px;
+      .el-form-item{
+        margin-bottom:2px;
+      }
+
+      .el-select{
+        border-right:1px solid #eee;
+        width:auto!important;
+      }
+      &:nth-child(3){
+        .el-select{
+          border-right:0 none;
+        }
+      }
+    }
+    .el-col{
+      margin-right:0!important;
+
+      .el-input__inner{
+        border: 0 none;
+        color: #333;
+      }
+      .el-input__icon{
+        left:65px;
+      }
+    }
+    .iotDeviceFormSearch{
+      width:83%!important;
+      .el-input__inner{
+        background: #eee;
+      }
+    }
+  }
+  .el-select-dropdown{
+    border: 0 none;
+    left:0!important;
+    width: 100%;
+    box-shadow: none;
+    //padding-left:20px;
+    border-bottom: 1px solid #c8c7cc;
+    border-top: 1px solid #c8c7cc;
+    background: #f7f7f7;
+    text-align: center;
+
+    .el-select-dropdown__list{
+      padding:0;
+      .el-select-dropdown__item{
+        border-top: 1px solid #c8c7cc;
+
+        &:first-child{
+          border-top: 0 none;
+        }
+      }
+    }
+  }
+  .iotDeviceTab{
+    display: none;
+  }
+
+  .iotDeviceTabMobile{
+    display: block!important;
+    padding:0 10px;
+    border-top:1px solid #eee;
+
+    ul{
+      width: 100%;
+      display: inline-block;
+      border-bottom:1px solid #eee;
+
+      li{
+        width: 100%;
+        display: inline-block;
+        line-height: 35px;
+
+        b{
+          font-weight: normal;
+          color: #32a8ee;
+          font-size: 12px;
+          float: left;
+        }
+        span{
+          font-size: 12px;
+          color: #333;
+          display: inline-block;
+          width: 70%;
+          overflow: hidden;
+          -ms-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space:nowrap;
+          text-align: right;
+          float: right;
+        }
+      }
+    }
+  }
+  //.iotDeviceTab{
+  //  .el-table__header-wrapper{
+  //    display: none;
+  //  }
+  //  .el-table__body-wrapper{
+  //    .el-table__body{
+  //      table-layout: initial;
+  //      width: 100%!important;
+  //
+  //      tbody{
+  //        td{
+  //          display: block;
+  //          text-align: right;
+  //
+  //          .cell{
+  //            line-height: 40px;
+  //          }
+  //          .cellTit{
+  //            display: inline-block;
+  //            float: left;
+  //            font-weight: bold;
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+}

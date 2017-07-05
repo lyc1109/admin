@@ -1,0 +1,44 @@
+// 边框，使用：@include border(all|left|right|bottom|top)
+@mixin border($side: all, $bordercolor: $border){
+  @if($side == all){
+    border: 1px solid $bordercolor;
+  }
+  @else if($side == top){
+    border-top: 1px solid $bordercolor;
+  }
+  @else if($side == bottom){
+    border-bottom: 1px solid $bordercolor;
+  }
+  @else if($side == left){
+    border-left: 1px solid $bordercolor;
+  }
+  @else if($side == right){
+    border-right: 1px solid $bordercolor;
+  }
+}
+
+// 边框-虚线，使用：@include border(all|left|right|bottom|top)
+@mixin border-dashed($side: all, $bordercolor: $border){
+  @if($side == all){
+    border: 1px dashed $bordercolor;
+  }
+  @else if($side == top){
+    border-top: 1px dashed $bordercolor;
+  }
+  @else if($side == bottom){
+    border-bottom: 1px dashed $bordercolor;
+  }
+  @else if($side == left){
+    border-left: 1px dashed $bordercolor;
+  }
+  @else if($side == right){
+    border-right: 1px dashed $bordercolor;
+  }
+}
+
+// 边框圆角，默认3px, 使用：@include border-radius(5px)
+@mixin border-radius($radius: 3px) {
+  -webkit-border-radius: $radius !important;
+  -moz-border-radius: $radius !important;
+  border-radius: $radius !important;
+}

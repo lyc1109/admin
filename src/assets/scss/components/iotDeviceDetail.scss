@@ -1,0 +1,504 @@
+.iotDeviceDetail{
+  $max: 100%;
+  %center{
+    text-align: center;
+  }
+  z-index:1;
+  padding:80px 20px 20px 238px;
+
+  h1{
+    width: $max;
+    line-height: 40px;
+    border-bottom:1px solid #ececec;
+
+    .title{
+      font-size: 20px;
+      font-weight:normal;
+      padding-left:10px;
+      border-left:5px solid #3a9ada;
+      color: #656565;
+    }
+    .el-button{
+      float: right;
+      margin-right:8px;
+    }
+  }
+  .iotDeviceDetailMain{
+    margin-top:20px;
+
+      .iotDeviceImgMain{
+        width:$max;
+        padding-bottom:$max;
+        position: relative;
+        height:0;
+
+        .iotDeviceImgZz{
+          width: $max;
+          background: #000;
+          opacity: .7;
+          filter:alpha(opacity=70);
+          z-index:2;
+          padding-bottom: $max;
+          position: absolute;
+          border: 5px solid #000;
+        }
+        img{
+          width: $max;
+          border:5px solid #ccc;
+          z-index:1;
+          position: absolute;
+          height: $max;
+        }
+        i{
+          font-size: 2.5vw;
+          color: #fff;
+          position: absolute;
+          top:20%;
+          width: $max;
+          @extend %center;
+          z-index:3;
+        }
+        b{
+          font-weight:normal;
+          font-size: .8vw;
+          color: #fff;
+          z-index: 3;
+          position: absolute;
+          width: $max;
+          @extend %center;
+          display: inline-block;
+          top:52%;
+        }
+        span{
+          font-size:.6vw;
+          color: #fff;
+          z-index: 3;
+          position: absolute;
+          width: $max;
+          @extend %center;
+          display: inline-block;
+          top:65%;
+        }
+      }
+      .iotDeviceImfoDetail{
+        .el-col{
+          line-height: 30px;
+          b{
+            width:33.33%;
+            display: inline-block;
+            float: left;
+            text-align: right;
+            margin-right:10px;
+            color: #333;
+            font-size: 14px;
+            font-weight:normal;
+          }
+          span{
+            width:63%;
+            float: left;
+            display: inline-block;
+            font-size: 14px;
+            color: #757575;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space:nowrap;
+          }
+        }
+      }
+    .iotDeviceDetailMainRight{
+      border-left:1px solid #ececec;
+      box-sizing: border-box;
+      padding:0 20px;
+
+      .el-row{
+        .el-col{
+          div{
+            //background: #38af78;
+            padding-bottom:60%;
+            height:0;
+            margin-bottom:10px;
+            color: #fff;
+
+            &.green-box{
+              background: #38af78;
+            }
+            &.blue-box{
+              background: #4f81dc;
+            }
+            &.red-box{
+              background: #d46060;
+            }
+            &.oranage-box{
+              background: #e0ac4c;
+            }
+            &.purple-box{
+              background: #c56acc;
+            }
+            &.olivine-box{
+              background: #87cc63;
+            }
+
+            h4{
+              width: $max;
+              @extend %center;
+              font-size: 1.5vw;
+              color: #fff;
+              font-weight:normal;
+              padding-top:15%;
+            }
+            span{
+              width: $max;
+              @extend %center;
+              font-size: 1.1vw;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+    .iotDeviceDetailMainBottom{
+      margin-top:10px;
+
+      #filterDetail,#deviceLog,#waterStatistics,#waterRecord{
+        h2{
+          line-height: 30px;
+          font-weight:normal;
+
+          span{
+            padding-left: 15px;
+            border-left:5px solid #3a9ada;
+            font-size: 18px;
+            color: #555;
+
+            b{
+              font-weight:normal;
+              color: #e52323;
+            }
+          }
+        }
+      }
+      #filterDetail{
+        .filterDetailMain{
+          .el-col{
+            border: 1px solid rgba(80, 142, 218, 0.3);
+            border-radius: 5px;
+            padding:20px 0;
+            position: relative;
+            margin-top:10px;
+
+            i{
+              width: 25px;
+              height: 25px;
+              line-height: 25px;
+              font-size: 14px;
+              background: #508eda;
+              color: #fff;
+              display: inline-block;
+              border-radius:5px 0 25px 0;
+              position: absolute;
+              top:0;
+              left:0;
+              text-indent: .4em;
+            }
+            span{
+              font-size: .75vw;
+              color: #555;
+              display: inline-block;
+              margin-left:7%;
+              width: 10%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            .el-progress{
+              width:70%;
+              margin-left:10px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+      #deviceLog{
+        .el-col{
+          line-height: 40px;
+
+          &:nth-child(odd){
+            background: #ececec;
+          }
+          b{
+            font-weight:normal;
+            color: #333;
+            font-size: 14px;
+            padding-left:10px;
+          }
+          span{
+            float: right;
+            color: #999;
+            font-size: 13px;
+            padding-right:10px;
+          }
+        }
+      }
+      #waterStatistics{
+        .waterStatisticsBtn,.el-date-editor{
+          float: right;
+          margin-left:8px;
+
+          .el-radio-button{
+            .el-radio-button__inner{
+              border-left:none;
+              font-size: 14px;
+              padding:10px 13px;
+              color: initial;
+            }
+
+            &:first-child{
+              .el-radio-button__inner{
+                border-left: 1px solid #bfcbd9;
+              }
+            }
+            .el-radio-button__orig-radio:checked+.el-radio-button__inner{
+              color: #fff;
+            }
+          }
+        }
+
+      }
+      #waterRecord{
+        .el-col{
+          line-height: 40px;
+          color: #333;
+
+          &:nth-child(odd){
+            background: #ececec;
+          }
+          &#pageArray{
+            background: 0 none;
+            margin-top:20px;
+
+            .el-pagination{
+              float: right;
+
+              span{
+                font-size: 13px;
+                position:relative;
+                top:-2px;
+              }
+            }
+            b{
+              float: right;
+              font-size: 13px;
+              color: #555;
+              position: relative;
+              top:-6.5px;
+              padding-right:0;
+
+              strong{
+                color: #e56565;
+              }
+            }
+          }
+          span{
+            font-size: 14px;
+            padding-left:15px;
+          }
+          b{
+            font-size: 12px;
+            font-weight:normal;
+            float: right;
+            color: #999;
+            padding-right: 10px;
+          }
+        }
+      }
+      //.tabRow{
+      //  position: absolute;
+      //  width: 100%;
+      //}
+    }
+  }
+}
+.el-loading-mask{
+  margin-top:60px;
+  margin-left:218px;
+}
+//.tabAnimate-enter,.tabAnimate-active{
+//  transform: translate(0,10px);
+//}
+//.tabAnimate-lease,.tabAnimate-enter-active{
+//  -webkit-transition: transform .3s ease-in-out;
+//  -moz-transition: transform .5s ease-in-out;
+//  -ms-transition: transform .5s ease-in-out;
+//  -o-transition: transform .5s ease-in-out;
+//  transition: transform .5s ease-in-out;
+//}
+@media screen and (max-width: 1199px){
+  .iotDeviceDetail{
+    padding-left: 10px;
+    padding-right:10px;
+  }
+}
+@media screen and (max-width: 767px){
+  .pagToggle{
+    display: none;
+  }
+  .el-col-offset-1{
+    margin-left:0!important;
+  }
+  .iotDeviceImgMain{
+    width: 20%!important;
+    padding-bottom: 20%!important;
+    margin:0 auto 20px;
+
+    .pcTime{
+      display: none!important;
+    }
+    i{
+      font-size: 2.5rem!important;
+      width: 111%!important;
+    }
+    b{
+      font-size: 1.3rem!important;
+      width: 111%!important;
+    }
+  }
+  .iotDeviceDetailMainRight{
+    margin-top:10px;
+    border-left:0 none!important;
+
+    .el-col-xs-24{
+      div{
+        padding-bottom: 40%!important;
+        h4{
+          font-size: 2.5rem!important;
+          padding-top: 10%!important;
+        }
+        span{
+          font-size: 2rem!important;
+        }
+      }
+    }
+  }
+  .waterStatisticsBtn{
+    .el-radio-button__inner{
+      padding:1rem 1.1rem!important;
+      font-size: 1.3rem!important;
+    }
+  }
+  .el-date-editor{
+    width: 100%!important;
+    margin-top:1rem;
+  }
+  .iotDeviceDetailMainBottom{
+    .el-tabs__header{
+      border-bottom: 0 none;
+
+      .el-tabs__nav{
+        width: 100%;
+        box-sizing: border-box;
+
+        .el-tabs__item{
+          width: 25%;
+          text-align: center;
+          padding:0;
+          float: left;
+          border: 0 none;
+          margin:0;
+
+          &.is-active{
+            border-left: 1px solid #d1dbe5;
+            border-right: 1px solid #d1dbe5;
+            box-sizing: border-box;
+
+            &:last-child{
+              border-right: 0 none;
+            }
+            &:first-child{
+              border-left:0 none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tabRow{
+    #deviceLog,#waterRecord{
+      margin-top:20px;
+
+      .el-row{
+        margin-top:10px;
+      }
+    }
+  }
+  #serviceRecord,#rechargeRecord{
+    margin-bottom:5px;
+    border-bottom:1px solid #dfe6ec;
+    td{
+      border: 0 none;
+    }
+    .el-table__empty-block{
+      width:100%!important;
+    }
+    .el-table__header-wrapper{
+      display: none;
+    }
+    .el-table__body-wrapper{
+      .el-table__body{
+        table-layout: initial;
+        width: 100%!important;
+
+        tbody{
+          td{
+            display: block;
+            text-align: right;
+
+            .cell{
+              line-height: 40px;
+            }
+
+            .cellTit{
+              display: inline-block;
+              float: left;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  .el-select-dropdown{
+    border: 0 none;
+    left:0!important;
+    width: 100%;
+    box-shadow: none;
+    //padding-left:20px;
+    border-bottom: 1px solid #c8c7cc;
+    border-top: 1px solid #c8c7cc;
+    background: #f7f7f7;
+    text-align: center;
+
+    .el-select-dropdown__list{
+      padding:0;
+      .el-select-dropdown__item{
+        border-top: 1px solid #c8c7cc;
+
+        &:first-child{
+          border-top: 0 none;
+        }
+      }
+    }
+  }
+  #filterDetail{
+    .filterDetailMain{
+      .el-col{
+        span{
+          font-size: 1.3rem!important;
+        }
+        .el-progress{
+          margin-top:-4px;
+        }
+      }
+    }
+  }
+}

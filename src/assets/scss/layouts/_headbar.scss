@@ -1,0 +1,140 @@
+.headbar{
+  position: fixed;
+  z-index: 10;
+  width:100%;
+  height:60px;
+
+  .listNormal{
+    position: absolute;
+    display: inline-block;
+    background: #fff;
+    top: 45%;
+    width: 25px;
+    height: 3px;
+    z-index: 10;
+  }
+  .transition{
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+  }
+  .listImg{
+    left:10px;
+    @extend .listNormal;
+    @extend .transition;
+
+    &:before{
+      top:7px;
+      content: '';
+      @extend .listNormal;
+      @extend .transition;
+    }
+    &:after{
+      top:-7px;
+      content: '';
+      @extend .listNormal;
+      @extend .transition;
+    }
+  }
+  .el-menu-top{
+    background: #3a9ada;
+
+    .left_head{
+      position: absolute;
+      width:218px;
+    }
+
+  }
+  .nav_top{
+    float: right!important;
+
+    .el-menu--horizontal .el-menu-item:hover, .el-menu--horizontal .el-submenu__title:hover{
+      background: #3a9ada;
+    }
+
+    .el-submenu__title{
+      color: #fff;
+      float: right;
+
+      i{
+        color: #fff;
+      }
+    }
+  }
+  .bell{
+    float: right!important;
+    color: #fff;
+  }
+  .head_img{
+
+    width: 100%;
+    line-height: 60px;
+    cursor: pointer;
+    background: #324157;
+    height: 60px;
+
+    img{
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 8px;
+      margin-left: 30px;
+    }
+    span{
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (min-width: 1200px){
+  .listImage{
+    display: none!important;
+  }
+}
+@media screen and (max-width: 1199px){
+  .left_head{
+    text-align: center;
+    width: 100%!important;
+
+    .head_img{
+      background: 0 none!important;
+    }
+  }
+  .nav_top{
+    .el-menu{
+      width:100%;
+      position: fixed!important;
+      top:60px!important;
+      text-align: center;
+    }
+  }
+  .el-submenu__title{
+    padding:0 8px;
+  }
+  .el-menu--horizontal .el-submenu__title:hover{
+    background: 0 none!important;
+  }
+}
+.listImged{
+  background: transparent!important;
+  @extend .transition;
+  @extend .listNormal;
+  left: 10px;
+
+  &:before{
+    transform: rotate(45deg);
+    @extend .transition;
+    @extend .listNormal;
+    content: '';
+  }
+  &:after{
+    transform: rotate(-45deg);
+    @extend .transition;
+    @extend .listNormal;
+    content: '';
+  }
+  .listImage{
+    display: inline-block!important;
+  }
+}

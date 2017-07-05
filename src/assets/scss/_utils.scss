@@ -1,0 +1,207 @@
+/* ----------------------------------------------
+ * 辅助工具类
+ * ---------------------------------------------- */
+
+// 背景色
+.bg{ background: $gray-light !important; }
+.bg-gray{ background: $gray !important; }
+.bg-white{ background: $white !important; }
+
+// -----------------
+// 字体颜色
+.font-light{ color: $font-color-light !important; }
+.font-lighter{ color: $font-color-lighter !important; }
+.font-white{ color: $white !important; }
+
+// -----------------
+// 字体大小
+.font-body{ font-size: $font-size-default !important;}
+.font-title{ font-size: $font-size-title !important;}
+.font-title-small{ font-size: $font-size-title-small !important;}
+.font-title-extra{ font-size: $font-size-title-extra !important;}
+
+// -----------------
+// 字体粗细
+.font-bold{ font-weight: bold !important; }
+.font-bold-400{ font-weight: 400 !important; }
+.font-bold-500{ font-weight: 500 !important; }
+.font-bold-600{ font-weight: 500 !important; }
+.font-bold-700{ font-weight: 700 !important; }
+
+// -----------------
+// 其它颜色
+.color-primary{ color: $primary !important; }
+.color-success{ color: $success !important; }
+.color-waning{ color: $warning !important; }
+.color-danger{ color: $danger !important; }
+.color-info{ color: $info !important; }
+.color-blue-light{ color: $blue-light !important; }
+.color-blue-dark{ color: $blue-dark !important; }
+.color-pink{ color: $pink !important; }
+.color-purple{ color: $purple !important; }
+.color-orange{ color: $orange !important; }
+.color-white{ color: $white !important; }
+
+// -----------------
+// 对齐
+.valign-center{ @extend %valign-center; }
+.valign-middle{  vertical-align: middle !important; }
+.valign-bottom{  vertical-align: bottom !important; }
+
+.block-center{ margin: 0 auto; }
+
+.inline{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.align-center{ text-align: center; }
+.align-right{ text-align: right; }
+.align-left{ text-align: left; }
+
+// -----------------
+// 文本断行
+.text-wrapper{
+    @extend %text-wrapper;
+    width: 100%;
+}
+.text-wrapper80{
+  @extend %text-wrapper;
+  width: 80%;
+}
+.text-wrapper70{
+  @extend %text-wrapper;
+  width: 70%;
+}
+
+// 超过2行隐藏
+.text-wrapper-2line{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+// -----------------
+// 边框
+.border{ @include border(); }
+.border-top{ @include border(top); }
+.border-left{ @include border(left); }
+.border-right{ @include border(right); }
+.border-bottom{ @include border(bottom); }
+
+.border-radius{ @include border-radius(3px); }
+
+.border-gray{ @include border(all, $border); }
+.border-gray-top{ @include border(top, $border); }
+.border-gray-left{ @include border(left, $border); }
+.border-gray-right{ @include border(right, $border); }
+.border-gray-bottom{ @include border(bottom, $border); }
+
+.border-dashed{ @include border-dashed(); }
+.border-dashed-top{ @include border-dashed(top); }
+.border-dashed-left{ @include border-dashed(left); }
+.border-dashed-right{ @include border-dashed(right); }
+.border-dashed-bottom{ @include border-dashed(bottom); }
+
+
+// -----------------
+// 边距
+.padding{ @extend %padding;}
+.padding-s{ @extend %padding-s;}
+.padding-m{ @extend %padding-m; }
+.padding-l{ @extend %padding-l; }
+.padding-xl{ @extend %padding-xl; }
+.padding-xxl{ @extend %padding-xxl; }
+.padding-zero{ padding: 0 !important; }
+
+// ---------------------
+// padding-top
+.padding-top{ @extend %padding-top; }
+.padding-top-s{ @extend %padding-top-s; }
+.padding-top-m{ @extend %padding-top-m; }
+.padding-top-l{ @extend %padding-top-l; }
+.padding-top-xl{ @extend %padding-top-xl; }
+.padding-top-xxl{ @extend %padding-top-xxl; }
+.padding-top-zero{ padding-top: 0 !important; }
+
+// ---------------------
+// padding-bottom
+.padding-bottom{ @extend %padding-bottom; }
+.padding-bottom-s{ @extend %padding-bottom-s; }
+.padding-bottom-m{ @extend %padding-bottom-m; }
+.padding-bottom-l{ @extend %padding-bottom-l; }
+.padding-bottom-xl{ @extend %padding-bottom-xl; }
+.padding-bottom-xxl{ @extend %padding-bottom-xxl; }
+.padding-bottom-zero{ padding-bottom: 0 !important; }
+
+// ---------------------
+// padding-left
+.padding-left{ @extend %padding-left; }
+.padding-left-s{ @extend %padding-left-s; }
+.padding-left-m{ @extend %padding-left-m; }
+.padding-left-l{ @extend %padding-left-l; }
+.padding-left-xl{ @extend %padding-left-xl; }
+.padding-left-xxl{ @extend %padding-left-xxl; }
+.padding-left-zero{ padding-left: 0 !important; }
+
+// ---------------------
+// padding-right
+.padding-right{ @extend %padding-right; }
+.padding-right-s{ @extend %padding-right-s; }
+.padding-right-m{ @extend %padding-right-m; }
+.padding-right-l{ @extend %padding-right-l; }
+.padding-right-xl{ @extend %padding-right-xl; }
+.padding-right-xxl{ @extend %padding-right-xxl; }
+.padding-right-zero{ padding-right: 0 !important; }
+
+// ---------------------
+// margin
+.margin{ @extend %margin; }
+.margin-s{ @extend %margin-s; }
+.margin-m{ @extend %margin-m; }
+.margin-l{ @extend %margin-l; }
+.margin-xl{ @extend %margin-xl; }
+.margin-xxl{ @extend %margin-xxl; }
+.margin-zero{ margin: 0 !important; }
+
+// ---------------------
+// margin-top
+.margin-top{ @extend %margin-top; }
+.margin-top-s{ @extend %margin-top-s; }
+.margin-top-m{ @extend %margin-top-m; }
+.margin-top-l{ @extend %margin-top-l; }
+.margin-top-xl{ @extend %margin-top-xl; }
+.margin-top-xxl{ @extend %margin-top-xxl; }
+.margin-top-zero{ margin-top: 0 !important; }
+
+// ---------------------
+// margin-bottom
+.margin-bottom{ @extend %margin-bottom; }
+.margin-bottom-s{ @extend %margin-bottom-s; }
+.margin-bottom-m{ @extend %margin-bottom-m; }
+.margin-bottom-l{ @extend %margin-bottom-l; }
+.margin-bottom-xl{ @extend %margin-bottom-xl; }
+.margin-bottom-xxl{ @extend %margin-bottom-xxl; }
+.margin-bottom-zero{ margin-bottom: 0 !important; }
+
+// ---------------------
+// margin-left
+.margin-left{ @extend %margin-left; }
+.margin-left-s{ @extend %margin-left-s; }
+.margin-left-m{ @extend %margin-left-m; }
+.margin-left-l{ @extend %margin-left-l; }
+.margin-left-xl{ @extend %margin-left-xl; }
+.margin-left-xxl{ @extend %margin-left-xxl; }
+.margin-left-zero{ margin-left: 0 !important; }
+
+// ---------------------
+// margin-right
+.margin-right{ @extend %margin-right; }
+.margin-right-s{ @extend %margin-right-s; }
+.margin-right-m{ @extend %margin-right-m; }
+.margin-right-l{ @extend %margin-right-l; }
+.margin-right-xl{ @extend %margin-right-xl; }
+.margin-right-xxl{ @extend %margin-right-xxl; }
+.margin-right-zero{ margin-right: 0 !important; }
